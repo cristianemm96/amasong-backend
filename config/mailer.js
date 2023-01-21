@@ -15,4 +15,4 @@ export const transporter = nodemailer.createTransport({
 }
 });
 
-transporter.verify().then(() => console.log("Ready"));
+transporter.verify().then(() => console.log("Mailer OK")).catch(console.log("Error al conectar"));
