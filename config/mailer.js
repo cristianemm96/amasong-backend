@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import nodemailer  from "nodemailer";
 // create reusable transporter object using the default SMTP transport
 export const transporter = nodemailer.createTransport({
