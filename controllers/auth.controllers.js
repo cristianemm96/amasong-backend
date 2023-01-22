@@ -82,7 +82,7 @@ export const checkEmailForForgotPassword = async (req, res) => {
   }
   try {
     await transporter.sendMail({
-      from: '"Contraseña olvidada" <cristian.emanuel.m96@gmail.com>', // sender address
+      from: '"Contraseña olvidada" <cristianemanuelm96@outlook.com>', // sender address
       to: `${emailReq}`, // list of receivers
       subject: "Restaurar contraseña", // Subject line
       html: `
