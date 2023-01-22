@@ -75,7 +75,7 @@ export const checkEmailForForgotPassword = async (req, res) => {
     const token = jwt.sign({ id: response[0].id }, process.env.SECRET, {
       expiresIn: 4000,
     });
-    link = `https://amasong-backend-2-e4w2dqfwc-cristianemm96.vercel.app/${token}`;
+    link = `https://amasong-frontend.vercel.app/${token}`;
     console.log(token);
   } catch (error) {
     res.status(400).json({ message });
