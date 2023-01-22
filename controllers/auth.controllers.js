@@ -69,6 +69,7 @@ export const checkEmailForForgotPassword = async (req, res) => {
   if (!(response.length > 0))
     return res.status(400).json({ message: "Ha ocurrido un error" });
   const message = "Revisa tu email para cambiar la contraseña";
+  let emailStatus = "OK";
   let link = "";
   try {
     const token = jwt.sign({ id: response[0].id }, process.env.SECRET, {
