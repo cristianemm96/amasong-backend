@@ -10,15 +10,15 @@ import { createRoles } from "./libs/initialSetup.js";
 
 const app = express();
 createRoles();
-app.use((req, res, next) => {
-  res.header("x-acess-token");
+//app.use((req, res, next) => {
+  //res.header("x-acess-token");
   //res.header("Access-Control-Allow-Origin", "*");
   //res.header(
   //  "Access-Control-Allow-Headers",
   //  "Origin, X-Requested-With, Content-Type, Accept"
   //);
-  next();
-});
+  //next();
+//});
 
 app.use(cors());
 app.use(express.json());
