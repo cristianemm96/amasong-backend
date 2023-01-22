@@ -2,8 +2,9 @@ import dotenv from "dotenv";
 import nodemailer from "nodemailer";
 dotenv.config();
 // create reusable transporter object using the default SMTP transport
+console.log(process.env.MAILERPASSWORD)
 export const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
+  service:"gmail",
   type: 'OAuth2',
   secureConnection: false,
   port: 587,
