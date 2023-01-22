@@ -4,6 +4,7 @@ dotenv.config();
 // create reusable transporter object using the default SMTP transport
 export const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
+  type: 'OAuth2',
   secureConnection: false,
   port: 587,
   tls: {
